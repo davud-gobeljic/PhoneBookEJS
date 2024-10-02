@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telefonski Imenik</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Ako imate dodatne stilove -->
+
+    <style>
+        .custom-img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        transform: scaleX(1.6); /* Povećava širinu za 20% */
+        transform-origin: center; /* Centriranje transformacije */ 
+        }
+
+    </style>
+</head>
+<body>
+    <%- include('../../partials/header.ejs') %>
+    
+    
+    <div class="container mt-4">
+        <h1>Stranica za Organizacije</h1>
+        
+        <!-- Uključite sliku ovdje -->
+        <div class="text-center ">
+            <img src="/org.webp" alt="Organizacija Sema" class="img-fluid custom-img">
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

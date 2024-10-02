@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+.navbar {
+    margin-bottom: 20px;
+}
+.table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+}
+.container {
+    flex: 1;
+}
+.container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.badge-custom {
+    background-color: #ffc107;
+    color: #212529;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+.navbar-text {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+}
+.navbar-brand i {
+    margin-right: 5px; /* Razmak između ikone i teksta */
+}
+.navbar-nav {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navbar-brand {
+display: flex;
+align-items: center;
+text-align: center;
+}
+
+.navbar-brand i {
+margin-right: 10px; /* Razmak između ikone i teksta */
+}
+
+.navbar-text {
+font-size: 1rem; /* Prilagodite veličinu fonta po potrebi */
+}

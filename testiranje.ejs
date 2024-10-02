@@ -1,0 +1,57 @@
+<nav>
+    <div>
+        <a href="#">
+            <i class="fas fa-address-book"></i> <!-- Ikonica imenika -->
+        </a>
+        <span>
+            <strong>INTERNI TELEFONSKI IMENIK MINISTARSTVA VANJSKIH POSLOVA BOSNE I HERCEGOVINE</strong>
+        </span>
+        <% if (isAdmin) { %>
+            <a href="/add">Dodaj Novog Korisnika</a>
+        <% } %>
+        <% if (req.session.user) { %>
+            <a href="/logout">Odjavi se</a>
+        <% } else { %>
+            <a href="/login">Prijavi se</a>
+        <% } %>
+    </div>
+</nav>
+
+<div>
+    <h1>Telefonski Imenik Ambasada</h1>
+    <% if (isAdmin) { %>
+        <a href="/add">Dodaj Novog Korisnika</a>
+    <% } %>
+    <% Object.keys(groupedUsers).forEach(ambasada_broj => { %>
+        <h2>
+            Ambasada <%= groupedUsers[ambasada_broj].ambasada %> <span>(<%= ambasada_broj %>)</span>
+        </h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ime i Prezime</th>
+                    <th>Funkcija</th>
+                    <th>Lokal</th>
+                    <% if (isAdmin) { %>
+                        <th>Akcije</th>
+                    <% } %>
+                </tr>
+            </thead>
+            <tbody>
+                <% groupedUsers[ambasada_broj].users.forEach(entry => { %>
+                    <tr>
+                        <td><%= entry.ime_prezime %></td>
+                        <td><%= entry.funkcija %></td>
+                        <td><%= entry.lokal %></td>
+                        <% if (isAdmin) { %>
+                            <td>
+                                <a href="/edit/<%= entry.id %>">Uredi</a>
+                                <a href="/delete/<%= entry.id %>">Obriši</a>
+                            </td>
+                        <% } %>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    <% }); %>
+</div>

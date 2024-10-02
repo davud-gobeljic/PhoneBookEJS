@@ -60,3 +60,10 @@ View: Prikazuje podatke korisniku. To su šabloni (npr. EJS) koji renderuju dina
 Controller: Upravlja logikom aplikacije i posreduje između modela i prikaza (view). Kontroler prima zahtjeve korisnika, komunicira s modelom da dobije potrebne podatke i zatim prosljeđuje te podatke prikazima da ih prikažu korisnicima.
 
 Ovaj pristup omogućava jasnu podjelu odgovornosti i bolju organizaciju koda, što olakšava održavanje, testiranje i proširenje aplikacije.
+
+
+## Pokretanje aplikacije
+
+Aplikacija se pokreće pomoću sljedeće komande:
+node app.js
+
